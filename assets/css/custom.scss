@@ -1,0 +1,340 @@
+@import url( 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+@import url( '../lib/bulma.io/bulma.min.css');
+@import url( '../lib/lightbox2/css/lightbox.min.css');
+@import url( '../lib/animate/animate.css');
+
+$green: #007C73;
+$grey: #4A4A4A;
+
+body,
+html {
+    font-family: 'Montserrat', sans-serif;
+    color: $grey;
+}
+.main-navbar {
+    background: transparent;
+    padding: 20px 0;
+}
+.hero-body {
+    z-index: 99;
+}
+.hero-bg {
+    position: relative;
+    height: 900px;
+    z-index: 9;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: url('../images/hero-bg.jpg');
+        -webkit-transform-origin: 0;
+        transform-origin: 0;
+        -webkit-transform: skewY(-8deg);
+        transform: skewY(-8deg);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: $green;
+        -webkit-transform-origin: 0;
+        transform-origin: 0;
+        -webkit-transform: skewY(-8deg);
+        transform: skewY(-8deg);
+        opacity: 0.8;
+        z-index: 77;
+    }
+    .title {
+        h1 {
+            color: #fff;
+            font-weight: bold;
+            @media(min-width:993px) {
+                font-size: 50px;
+            }
+        }
+        transform: translateY(-60%);
+    }
+}
+.button-hero {
+    background: transparent;
+    color: #fff;
+    border-radius: 200px;
+    border: 2px solid #fff;
+    padding: 20px 50px;
+    margin-top: 26px;
+}
+.navbar-item {
+    @media(min-width:993px) {
+        color: #fff;
+    }
+    transition: all ease-in-out 0.3s;
+    font-weight: bold;
+    font-size: 16px;
+}
+.navbar-link.is-active,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:hover {
+    background-color: #fafafa;
+    color: #3273dc;
+    border-radius: 30px;
+}
+.contend-form {
+    box-shadow: 0 16px 48px rgba(106, 202, 175, 0.08);
+    padding: 60px 80px 30px;
+    position: relative;
+    top: -250px;
+    background: #fff;
+    border-radius: 4px;
+    z-index: 99;
+    @media(max-width:762px) {
+        padding: 60px 40px 30px !important;
+    }
+}
+#suscription-form {
+    position: relative;
+}
+.bubble-item-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    @media(max-width:763px) {
+        display: none;
+    }
+}
+.bubble-item-top {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 24%;
+    top: -27%;
+    @media(max-width:763px) {
+        display: none;
+    }
+}
+.main-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        width: 5%;
+        height: 4px;
+        background: $green;
+    }
+}
+.hero-body {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.select select {
+    width: 100%;
+    min-height: 62px;
+    background: #fafafa;
+}
+.select {
+    width: 100%;
+    min-height: 62px;
+}
+
+.input,
+.textarea {
+    border-color: #C3C3C3;
+    padding: 30px 18px;
+    background: #FAFAFA;
+    box-shadow: none;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.button {
+
+    &.is-primary {
+        background-color: $green;
+        color: #fff;
+        border-radius: 200px;
+        padding: 20px 50px;
+        margin-top: 26px;
+        line-height: 2px;
+        font-size: 18px;
+        font-weight: bold;
+        &:focus,
+        &:hover {
+            background-color: darken($green, 0.5); 
+        }
+    }
+    &.has-shadow {
+        box-shadow: 0 2px 6px rgba($green, 0.8);
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+.p-2 {
+    padding: 20px 0;
+}
+.m-t2 {
+    margin-top: 20px;
+}
+.footer {
+    background: #191919;
+    padding: 32px;
+    color: #fff;
+}
+.logo-footer {
+    width: 10%;
+    opacity: 0.1;
+}
+
+.sponsors-wrap {
+    background: #f7f7fa;
+    padding: 35px 0;
+
+    .column {
+        align-items: center;
+        text-align: center;
+        flex-basis: initial;
+    }
+    img {
+        width: 30%;
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+}
+.text-center {
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 35px;
+    line-height: 35px;
+    margin: 120px 0 90px;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        width: 7%;
+        margin: 0 auto;
+        left: -15px;
+        right: 0;
+    }
+}
+
+.call-to-action {
+    background: url('../images/gallery/Sunset-GT-November-124.jpg') center center no-repeat;
+    background-size: cover;
+    padding: 80px;
+    margin-bottom: 20px;
+    position: relative;
+    p {
+        color: #fff;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        background-color: $green;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0.6;
+    }
+}
+
+.m-t5 {
+    margin-top: 50px;
+}
+
+.events-info {
+    margin: 80px 0;
+    .main-title {
+        margin-bottom: 20px;
+        &:before {
+            width: 7%;
+        }
+    }
+    p {
+        color: #5B6F82;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    img {
+        z-index: 888;
+        position: relative;
+    }
+}
+
+.column {
+    &.align-items-center {
+        display: flex;
+        align-items: center; 
+    }
+
+}
+
+.rectangle {
+    border: 8px solid;
+    border-color: $green;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+    right: 13px;
+    z-index: 66;
+    @media(max-width:762px) {
+        display: none;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.rect--top {
+    left: -23px;
+    top: -12px;
+}
+
+.mt-150 {
+    margin-top: 150px;
+}
+
+.container {
+    @media(max-width:762px) {
+        padding: 0 15px;
+    }
+}
+
+.bg-black {
+    background: #191919;
+    z-index: 999!important;
+    transition: all ease-in-out;
+}
